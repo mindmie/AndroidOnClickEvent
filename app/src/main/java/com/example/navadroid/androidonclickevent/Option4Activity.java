@@ -1,6 +1,7 @@
 package com.example.navadroid.androidonclickevent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -40,15 +41,28 @@ public class Option4Activity extends AppCompatActivity {
         onClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
                 switch (v.getId()) {
                     case R.id.btn_process_4:
                         greet();
+                        break;
+                    case R.id.button:
+                        Intent i1 = new Intent( getApplicationContext(), Option5Activity.class);
+                        startActivity(i1);
+                        break;
+                    case R.id.button2:
+                        Intent i2 = new Intent( getApplicationContext(), Option3Activity.class);
+                        startActivity(i2);
                         break;
                 }
                 hideKeyboardInput(v);
             }
         };
     }
+
+
 
     // To greet the user
     private void greet(){

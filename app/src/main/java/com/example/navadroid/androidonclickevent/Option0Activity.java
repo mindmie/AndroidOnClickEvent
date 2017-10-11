@@ -1,6 +1,7 @@
 package com.example.navadroid.androidonclickevent;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,19 +16,23 @@ public class Option0Activity extends AppCompatActivity {
     private EditText etInput;
     private TextView tvOutput;
     private Button btnProcess;
+    private Button btnB;
+    private Button btnN;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {  // เปรียบเสมือน main
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_option0);
         bindView();
     }
 
     // To bind views to this activity
-    private void bindView(){
-        etInput = (EditText) findViewById(R.id.et_input_0);
+    private void bindView(){ // ผูกฟังก์ชั่นให้ทำงานด้วยกัน
+        etInput = (EditText) findViewById(R.id.et_input_0);  // view ที่มีอยู่ใน xml
         tvOutput = (TextView) findViewById(R.id.tv_body_0);
         btnProcess = (Button) findViewById(R.id.btn_process_0);
+        btnB = (Button) findViewById(R.id.button2);
+        btnN = (Button) findViewById(R.id.button);
     }
 
     // This "process" method MUST be bound in the layout XML file, "android:onClick="process""
@@ -35,6 +40,13 @@ public class Option0Activity extends AppCompatActivity {
         // Do we really need to compare view objects?
         if (v == btnProcess) {
             greet();
+        }
+        else if ( v == btnB){
+            back();
+        }
+        else if (v == btnN){
+            next();
+
         }
         hideKeyboardInput(v);
     }
@@ -44,7 +56,15 @@ public class Option0Activity extends AppCompatActivity {
         tvOutput.setText(getString(R.string.greeting) + " " + etInput.getText().toString());
     }
 
-    // To hide Android soft keyboard
+    private void back(){
+        startActivity( new Intent(Option0Activity.this, Option5Activity.class));
+    }
+
+    private void next(){
+        startActivity( new Intent( Option0Activity.this , Option1Activity.class));
+    }
+
+    // To hide Android soft keyboard วิธีซ่อนคีย์บอร์ด
     private void hideKeyboardInput(View v){
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);

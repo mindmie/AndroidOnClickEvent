@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".Option0Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Option0Activity">
-
         </activity>
         <activity android:name=".Option1Activity">
 
@@ -24,10 +24,10 @@
         <activity android:name=".Option2Activity">
 
         </activity>
-        <activity android:name=".Option3Activity">
+        <activity android:name=".Option4Activity">
 
         </activity>
-        <activity android:name=".Option4Activity">
+        <activity android:name=".Option3Activity">
 
         </activity>
         <activity android:name=".Option5Activity">
