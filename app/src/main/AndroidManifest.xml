@@ -12,7 +12,7 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".Option0Activity">
+        <activity android:name=".Option5Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -30,7 +30,7 @@
         <activity android:name=".Option3Activity">
 
         </activity>
-        <activity android:name=".Option5Activity">
+        <activity android:name=".Option0Activity">
 
         </activity>
     </application>

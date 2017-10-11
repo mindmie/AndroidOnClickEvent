@@ -35,6 +35,7 @@
             android:layout_width="179dp"
             android:layout_height="wrap_content"
             android:textSize="32sp"
+            android:onClick="process"
             android:text="b" />
 
         <Button
@@ -42,6 +43,7 @@
             android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:textSize="32sp"
+            android:onClick="process"
             android:text="n" />
 
     </LinearLayout>

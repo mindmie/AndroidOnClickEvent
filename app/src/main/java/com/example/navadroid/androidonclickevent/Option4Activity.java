@@ -34,6 +34,8 @@ public class Option4Activity extends AppCompatActivity {
         initOnClickListener();
         // To register click event to view
         findViewById(R.id.btn_process_4).setOnClickListener(onClickListener);
+        findViewById(R.id.button2).setOnClickListener(onClickListener);
+        findViewById(R.id.button).setOnClickListener(onClickListener);
     }
 
     // You don't have to bind any functions to "android:onClick" in layout XML file.
@@ -49,12 +51,10 @@ public class Option4Activity extends AppCompatActivity {
                         greet();
                         break;
                     case R.id.button:
-                        Intent i1 = new Intent( getApplicationContext(), Option5Activity.class);
-                        startActivity(i1);
+                        next();
                         break;
                     case R.id.button2:
-                        Intent i2 = new Intent( getApplicationContext(), Option3Activity.class);
-                        startActivity(i2);
+                        back();
                         break;
                 }
                 hideKeyboardInput(v);
@@ -67,6 +67,17 @@ public class Option4Activity extends AppCompatActivity {
     // To greet the user
     private void greet(){
         tvOutput.setText(getString(R.string.greeting) + " " + etInput.getText().toString());
+    }
+
+    private void back(){
+        Intent i1 = new Intent( getApplicationContext(), Option3Activity.class);
+        startActivity(i1);
+    }
+
+    private void next(){
+        Intent i2 = new Intent( getApplicationContext(), Option5Activity.class);
+        startActivity(i2);
+
     }
 
     // To hide Android soft keyboard
