@@ -57,11 +57,13 @@ public class Option0Activity extends AppCompatActivity {
     }
 
     private void back(){
-        startActivity( new Intent(Option0Activity.this, Option5Activity.class));
+        Intent i = new Intent(getApplicationContext(), Option5Activity.class);
+        startActivity(i);
     }
 
     private void next(){
-        startActivity( new Intent( Option0Activity.this , Option1Activity.class));
+        Intent i = new Intent(getApplicationContext(), Option1Activity.class);
+        startActivity(i);
     }
 
     // To hide Android soft keyboard วิธีซ่อนคีย์บอร์ด
