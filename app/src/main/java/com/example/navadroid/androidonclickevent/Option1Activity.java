@@ -67,3 +67,5 @@ public class Option1Activity extends AppCompatActivity {
         imm.hideSoftInputFromWindow(v.getWindowToken(), 0);
     }
 }
+
+//comment test
